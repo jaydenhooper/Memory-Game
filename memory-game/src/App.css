@@ -1,0 +1,39 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway&display=swap');
+
+.App {
+  max-width: 860px;
+  margin: 40px auto;
+}
+
+body {
+  margin: 0;
+  font-family: Raleway, sans-serif;
+  font-size: 1.5em;
+  text-align: center;
+  color:rgb(0, 0, 0);
+  background: rgb(216, 6, 33);
+}
+
+button {
+  padding: 6px 12px;
+  border: 2px solid white;
+  border-radius: 4px;
+  background: black;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 1em;
+  color: white;
+}
+
+button:hover {
+  border: 2px solid black;
+  background:white;
+  color: black;
+}
+
+.card-grid {
+    margin-top: 40px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-gap:20px;
+}
