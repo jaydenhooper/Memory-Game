@@ -11,7 +11,6 @@ const cardImages = [
   {"src": "\\img\\squirrel.png", matched: false},
 ]
 
-
 function App() {
   const [cards, setCards] = useState([]) 
   const [turns, setTurns] = useState(0) 
@@ -32,6 +31,7 @@ function App() {
 
   // handle a choice
   const handleChoice = (card) => {
+    if(card.id === choiceOne?.id) return;
     choiceOne ? setChoiceTwo(card) : setChoiceOne(card)
     
   }
@@ -49,16 +49,12 @@ function App() {
             return card
           })
         })
-        console.log('those cards match')
         resetTurn()
       } else {
-        console.log('those cards do not match') 
         setTimeout(() => resetTurn(), 1000)
       }
     }
   }, [choiceOne, choiceTwo])
-
-  console.log(cards)
 
   const resetTurn = () => {
     setChoiceOne(null)
